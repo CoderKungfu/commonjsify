@@ -1,0 +1,30 @@
+{
+  "name": "Commonjsify",
+  "devDependencies" : {
+    "browserify": "~> 10.2.4",
+    "browserify-incremental": "^3.0.1",
+    "reactify": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-tools":"*",
+    "react-addons-test-utils":"*",
+    "jest-cli": "*"
+  },
+  "scripts": {
+    "test": "node ./node_modules/jest-cli/bin/jest.js"
+  },
+  "jest": {
+    "rootDir": "./app/assets/javascripts/components",
+    "scriptPreprocessor": "<rootDir>/__tests__/preprocessor.js",
+    "moduleFileExtensions": [ "js", "jsx"],
+    "unmockedModulePathPatterns": [
+      "react"
+    ],
+    "testFileExtensions": ["js", "jsx"],
+    "testPathIgnorePatterns": [ "preprocessor.js" ]
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10"
+  }
+}
